@@ -4,6 +4,7 @@ interface SetMenusState {
     data: any[];
     meta: {
         last_page: number[];
+        current_page: number[];
     } | null;
     currentPage: number;
     selectedCuisine: string | null;

@@ -2,7 +2,12 @@ import React from "react";
 import Thumbnail from "./MenuItems/Thumbnail.tsx";
 import {Link} from "react-router-dom";
 
-const MenuCard = ({ menu, diners }) => {
+interface MenuCardProps {
+    menu: any;
+    diners: any;
+}
+
+const MenuCard: React.FC<MenuCardProps> = ({ menu, diners }) => {
     const calculatedPrice = menu.price * diners;
     const displayPrice = calculatedPrice < menu.minSpend ? menu.minSpend : calculatedPrice;
     return (

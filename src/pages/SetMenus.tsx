@@ -39,7 +39,14 @@ const SetMenus = () => {
     // Fetch menus whenever the page or cuisine changes
     useEffect(() => {
 
-        console.log([currentPage,selectedCuisine]);
+        const isDataLoaded =
+            data.length > 0 &&
+            meta &&
+            currentPage <= meta.current_page[0];
+
+        if (isDataLoaded) {
+            return;
+        }
 
         const loadData = async () => {
             setLoading(true);
@@ -50,7 +57,6 @@ const SetMenus = () => {
                     meta: fetchedData.meta,
                     append: currentPage > 1 // Append only if loading more pages
                 }));
-
 
             } catch (error) {
                 console.error(error);
@@ -97,8 +103,8 @@ const SetMenus = () => {
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {data.map((menu, index) => (
-                    <MenuCard menu={menu} diners={diners} />
+                {data.map((menu) => (
+                    <MenuCard key={menu.id} menu={menu} diners={diners} />
                 ))}
             </div>
 
