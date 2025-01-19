@@ -66,7 +66,7 @@ const SetMenus = () => {
         };
 
         loadData();
-    }, [currentPage, selectedCuisine, dispatch]);
+    }, [currentPage, selectedCuisine, dispatch,data, meta]);
 
 
     const handleCuisineSelect = (slug) => {
