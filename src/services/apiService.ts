@@ -13,6 +13,12 @@ const apiService = {
         return await response.json();
     },
 
+    fetchMenuDetail: async (id: string) => {
+        const response = await fetch(`http://127.0.0.1:8000/menu-item/${id}`);
+        if (!response.ok) throw new Error("Failed to fetch menu details");
+        return await response.json();
+    },
+
     fetchCuisines: async () => {
         const response = await fetch(`${API_BASE_URL}/cuisines`);
         if (!response.ok) throw new Error("Failed to fetch cuisines");
