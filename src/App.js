@@ -1,15 +1,24 @@
-// App.js
 import React from "react";
 import { Provider } from "react-redux";
-import store from "./redux/store.ts"; // Adjust the path if your store file is elsewhere
-import SetMenus from "./components/SetMenus"; // Adjust the path if needed
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import store from "./redux/store.ts";
+import SetMenus from "./pages/SetMenus.tsx";
+import MenuDetail from "./pages/MenuDetail.tsx";
 import "./App.css";
 
 const App = () => (
     <Provider store={store}>
-        <div className="p-6">
-            <SetMenus />
-        </div>
+        <Router>
+            <div className="p-6">
+                <Routes>
+                    {/* Route for the main Set Menus page */}
+                    <Route path="/" element={<SetMenus />} />
+
+                    {/* Route for the Menu Detail page */}
+                    <Route path="/menu-item/:id" element={<MenuDetail />} />
+                </Routes>
+            </div>
+        </Router>
     </Provider>
 );
 
