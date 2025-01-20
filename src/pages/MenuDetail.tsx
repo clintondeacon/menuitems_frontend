@@ -49,7 +49,7 @@ const MenuDetail = () => {
             <h1 className="text-2xl font-bold mb-2">{menu.name}</h1>
             <p className="text-lg text-gray-700 mb-4">{menu.description}</p>
             <p className="text-gray-800 mb-2">
-                <strong>Price:</strong> ${menu.price.toFixed(2)}
+                <strong>Price per person:</strong> ${menu.price.toFixed(2)}
             </p>
             <p className="text-gray-800 mb-4">
                 <strong>Minimum Spend:</strong> ${menu.minSpend.toFixed(2)}
