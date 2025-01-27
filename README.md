@@ -1,11 +1,12 @@
-# yhangry technical task frontend
+# Menu items frontend
 
+A basic front end built in react, mainly playing around.
 
 ## Installation
 
 1. Install backend
 
-Before beginning this installation, please ensure you have the backend installed from the repo at https://github.com/clintondeacon/yhangry_backend
+Before beginning this installation, please ensure you have the backend installed from the repo at https://github.com/clintondeacon/menuitems_backend
 
 2. Clone respository
 
