@@ -2,6 +2,9 @@
 
 A basic front end built in react, mainly playing around.
 
+> ![Alt text](.github/images/screenshot.png "Title")
+
+
 ## Installation
 
 1. Install backend
@@ -26,6 +29,7 @@ yarn start
 
 You can rerun this script at any time to completely refresh the data.
 
-5. Potemtial Cors issue
+5. Potential Cors issue
 
 You may potentially run into cors issues if the local URL is not http://localhost:3000. If so, you will need to add whatever local URL to the config/cors.php file on the backend
+
